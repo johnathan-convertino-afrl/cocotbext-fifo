@@ -1,4 +1,4 @@
-PROJECT_NAME := cocotbext_apb
+PROJECT_NAME := cocotbext_fifo
 
 MK_DIR := makefiles
 
