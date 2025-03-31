@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:xilinxFIFOtrans","xilinxFIFOtrans");NDSummary.OnSummaryLoaded("PythonClass:xilinxFIFOtrans",[["Python","Python"]],[["Classes","Class"]],[[107,0,0,"xilinxFIFOtrans"]]);

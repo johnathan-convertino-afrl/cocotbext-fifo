@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:xilinxFIFObase","xilinxFIFObase");NDSummary.OnSummaryLoaded("PythonClass:xilinxFIFObase",[["Python","Python"]],[["Classes","Class"],["Functions","Function"],["Groups","Group"]],[[110,0,0,"xilinxFIFObase"],[111,0,2,"Functions","Functions"],[112,0,1,"__init__","__init__"]]);

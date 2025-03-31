@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("_id",["Variable"],[["_idle",,[["busbase.self",,,,0,"File3:busbase.py:busbase.self._idle","PythonClass:busbase:self._idle"]]]]);

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("_si",["Variable"],[["_signals",,[["xilinxFIFOsink",,,,0,"File:driver.py:xilinxFIFOsink._signals","PythonClass:xilinxFIFOsink:_signals"],["xilinxFIFOsource",,,,0,"File:driver.py:xilinxFIFOsource._signals","PythonClass:xilinxFIFOsource:_signals"]]]]);

@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("PythonClass:xilinxFIFOsourceState","xilinxFIFOsourceState");NDSummary.OnSummaryLoaded("PythonClass:xilinxFIFOsourceState",[["Python","Python"]],[["Classes","Class"]],[[108,0,0,"xilinxFIFOsourceState"]]);
