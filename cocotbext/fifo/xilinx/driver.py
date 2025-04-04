@@ -108,13 +108,13 @@ class xilinxFIFOsource(xilinxFIFObase):
             self.bus.data.value = trans.data
             self.active = True
             self._state = xilinxFIFOsourceState.WRITE
-            self._idle_write.set()
       elif(self._state == xilinxFIFOsourceState.WRITE):
         if self.wqueue.empty():
           if self._ack.value:
             self.bus.en.setimmediatevalue(0)
             self.bus.data.setimmediatevalue(0)
             self.active = False
+            self._idle_write.set()
             self._state = xilinxFIFOsourceState.IDLE
         elif not self.bus.full.value:
           if self._ack.value:
@@ -227,9 +227,9 @@ class xilinxFIFOsink(xilinxFIFObase):
           if self.bus.valid.value and not self._fwft:
             trans.data = self.bus.data.value.integer
             await self.rqueue.put(trans)
+            self._idle_read.set()
           self.bus.en.value = 0
           self.active = False
-          self._idle_read.set()
           self._state = xilinxFIFOsinkState.IDLE
         else:
           if self.bus.valid.value:
