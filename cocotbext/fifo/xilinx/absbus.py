@@ -33,7 +33,7 @@
 
 import cocotb
 
-from ..busbase import *
+from cocotbext.busbase import *
 
 import enum
 

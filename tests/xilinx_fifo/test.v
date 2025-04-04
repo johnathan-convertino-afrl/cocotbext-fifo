@@ -79,21 +79,28 @@ module test #(
     inout                         wr_full
   );
 
+  reg r_wr_en;
+
   assign rd_data = wr_data;
 
-  assign rd_valid = wr_en;
+  assign rd_valid = r_wr_en;
 
   assign wr_full = 1'b0;
 
-  assign rd_empty = !wr_en;
+  assign rd_empty = !r_wr_en;
 
-  assign wr_ack = rd_en;
+  assign wr_ack = r_wr_en;
 
   //copy pasta, fst generation
   initial
   begin
     $dumpfile("test.fst");
     $dumpvars(0,test);
+  end
+
+  always @(posedge wr_clk)
+  begin
+    r_wr_en <= wr_en;
   end
 
 endmodule

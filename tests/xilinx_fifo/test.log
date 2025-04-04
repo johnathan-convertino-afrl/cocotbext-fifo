@@ -1,0 +1,1319 @@
+rm -f results.xml
+"make" -f Makefile results.xml
+make[1]: Entering directory '/home/convertinoj/Projects/PUBLIC/cocotbext-fifo/tests/xilinx_fifo'
+/usr/bin/iverilog -o sim_build/sim.vvp -D COCOTB_SIM=1 -s test -g2012 -f sim_build/cmds.f  test.v
+rm -f results.xml
+MODULE=test TESTCASE= TOPLEVEL=test TOPLEVEL_LANG=verilog \
+         /usr/bin/vvp -M /home/convertinoj/.local/lib/python3.12/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp -fst 
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:79   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (stable)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/convertinoj/.local/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1743802272
+     0.00ns INFO     cocotb.regression                  Found test test.run_test_001
+     0.00ns INFO     cocotb.regression                  running run_test_001 (1/1)
+                                                          Automatically generated test
+                                                          
+                                                          payload_data: incrementing_payload (No docstring supplied)
+     0.00ns INFO     cocotb.test.wr                     xilinxFIFOsource using prefix wr
+     0.00ns INFO     cocotb.test.wr                     Xilinx FIFO Source
+     0.00ns INFO     cocotb.test.wr                     Xilinx FIFO Source version 0.0.0
+     0.00ns INFO     cocotb.test.wr                     Copyright (c) 2025 Jay Convertino
+     0.00ns INFO     cocotb.test.wr                     https://github.com/johnathan-convertino-afrl/cocotbext-fifo
+     0.00ns INFO     cocotb.test.rd                     xilinxFIFOsink using prefix rd
+     0.00ns INFO     cocotb.test.rd                     Xilinx FIFO Sink
+     0.00ns INFO     cocotb.test.rd                     Xilinx FIFO Sink version 0.0.0
+     0.00ns INFO     cocotb.test.rd                     Copyright (c) 2025 Jay Convertino
+     0.00ns INFO     cocotb.test.rd                     https://github.com/johnathan-convertino-afrl/cocotbext-fifo
+     5.00ns INFO     cocotb.tb                          TEST VALUE : 0
+IDLE EXIT
+     6.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x0>
+READ VALID IN IDLE
+READ NOT VALID IN IDLE
+     8.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x0>
+     8.00ns INFO     cocotb.tb                          TEST VALUE : 1
+WRITE STATE WAIT ON FULL?
+    10.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1>
+READ IN READ STATE VALID
+    10.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x0>
+    10.00ns INFO     cocotb.tb                          TEST VALUE : 2
+WRITE STATE WAIT ON FULL?
+    12.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2>
+READ IN READ STATE VALID
+    12.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1>
+    12.00ns INFO     cocotb.tb                          TEST VALUE : 3
+WRITE STATE WAIT ON FULL?
+    14.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3>
+READ IN READ STATE VALID
+    14.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2>
+    14.00ns INFO     cocotb.tb                          TEST VALUE : 4
+WRITE STATE WAIT ON FULL?
+    16.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4>
+READ IN READ STATE VALID
+    16.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3>
+    16.00ns INFO     cocotb.tb                          TEST VALUE : 5
+WRITE STATE WAIT ON FULL?
+    18.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5>
+READ IN READ STATE VALID
+    18.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4>
+    18.00ns INFO     cocotb.tb                          TEST VALUE : 6
+WRITE STATE WAIT ON FULL?
+    20.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6>
+READ IN READ STATE VALID
+    20.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5>
+    20.00ns INFO     cocotb.tb                          TEST VALUE : 7
+WRITE STATE WAIT ON FULL?
+    22.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7>
+READ IN READ STATE VALID
+    22.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6>
+    22.00ns INFO     cocotb.tb                          TEST VALUE : 8
+WRITE STATE WAIT ON FULL?
+    24.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8>
+READ IN READ STATE VALID
+    24.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7>
+    24.00ns INFO     cocotb.tb                          TEST VALUE : 9
+WRITE STATE WAIT ON FULL?
+    26.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9>
+READ IN READ STATE VALID
+    26.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8>
+    26.00ns INFO     cocotb.tb                          TEST VALUE : 10
+WRITE STATE WAIT ON FULL?
+    28.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa>
+READ IN READ STATE VALID
+    28.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9>
+    28.00ns INFO     cocotb.tb                          TEST VALUE : 11
+WRITE STATE WAIT ON FULL?
+    30.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb>
+READ IN READ STATE VALID
+    30.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa>
+    30.00ns INFO     cocotb.tb                          TEST VALUE : 12
+WRITE STATE WAIT ON FULL?
+    32.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc>
+READ IN READ STATE VALID
+    32.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb>
+    32.00ns INFO     cocotb.tb                          TEST VALUE : 13
+WRITE STATE WAIT ON FULL?
+    34.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd>
+READ IN READ STATE VALID
+    34.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc>
+    34.00ns INFO     cocotb.tb                          TEST VALUE : 14
+WRITE STATE WAIT ON FULL?
+    36.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe>
+READ IN READ STATE VALID
+    36.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd>
+    36.00ns INFO     cocotb.tb                          TEST VALUE : 15
+WRITE STATE WAIT ON FULL?
+    38.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf>
+READ IN READ STATE VALID
+    38.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe>
+    38.00ns INFO     cocotb.tb                          TEST VALUE : 16
+WRITE STATE WAIT ON FULL?
+    40.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x10>
+READ IN READ STATE VALID
+    40.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf>
+    40.00ns INFO     cocotb.tb                          TEST VALUE : 17
+WRITE STATE WAIT ON FULL?
+    42.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x11>
+READ IN READ STATE VALID
+    42.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x10>
+    42.00ns INFO     cocotb.tb                          TEST VALUE : 18
+WRITE STATE WAIT ON FULL?
+    44.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x12>
+READ IN READ STATE VALID
+    44.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x11>
+    44.00ns INFO     cocotb.tb                          TEST VALUE : 19
+WRITE STATE WAIT ON FULL?
+    46.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x13>
+READ IN READ STATE VALID
+    46.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x12>
+    46.00ns INFO     cocotb.tb                          TEST VALUE : 20
+WRITE STATE WAIT ON FULL?
+    48.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x14>
+READ IN READ STATE VALID
+    48.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x13>
+    48.00ns INFO     cocotb.tb                          TEST VALUE : 21
+WRITE STATE WAIT ON FULL?
+    50.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x15>
+READ IN READ STATE VALID
+    50.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x14>
+    50.00ns INFO     cocotb.tb                          TEST VALUE : 22
+WRITE STATE WAIT ON FULL?
+    52.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x16>
+READ IN READ STATE VALID
+    52.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x15>
+    52.00ns INFO     cocotb.tb                          TEST VALUE : 23
+WRITE STATE WAIT ON FULL?
+    54.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x17>
+READ IN READ STATE VALID
+    54.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x16>
+    54.00ns INFO     cocotb.tb                          TEST VALUE : 24
+WRITE STATE WAIT ON FULL?
+    56.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x18>
+READ IN READ STATE VALID
+    56.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x17>
+    56.00ns INFO     cocotb.tb                          TEST VALUE : 25
+WRITE STATE WAIT ON FULL?
+    58.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x19>
+READ IN READ STATE VALID
+    58.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x18>
+    58.00ns INFO     cocotb.tb                          TEST VALUE : 26
+WRITE STATE WAIT ON FULL?
+    60.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1a>
+READ IN READ STATE VALID
+    60.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x19>
+    60.00ns INFO     cocotb.tb                          TEST VALUE : 27
+WRITE STATE WAIT ON FULL?
+    62.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1b>
+READ IN READ STATE VALID
+    62.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1a>
+    62.00ns INFO     cocotb.tb                          TEST VALUE : 28
+WRITE STATE WAIT ON FULL?
+    64.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1c>
+READ IN READ STATE VALID
+    64.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1b>
+    64.00ns INFO     cocotb.tb                          TEST VALUE : 29
+WRITE STATE WAIT ON FULL?
+    66.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1d>
+READ IN READ STATE VALID
+    66.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1c>
+    66.00ns INFO     cocotb.tb                          TEST VALUE : 30
+WRITE STATE WAIT ON FULL?
+    68.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1e>
+READ IN READ STATE VALID
+    68.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1d>
+    68.00ns INFO     cocotb.tb                          TEST VALUE : 31
+WRITE STATE WAIT ON FULL?
+    70.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x1f>
+READ IN READ STATE VALID
+    70.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1e>
+    70.00ns INFO     cocotb.tb                          TEST VALUE : 32
+WRITE STATE WAIT ON FULL?
+    72.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x20>
+READ IN READ STATE VALID
+    72.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x1f>
+    72.00ns INFO     cocotb.tb                          TEST VALUE : 33
+WRITE STATE WAIT ON FULL?
+    74.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x21>
+READ IN READ STATE VALID
+    74.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x20>
+    74.00ns INFO     cocotb.tb                          TEST VALUE : 34
+WRITE STATE WAIT ON FULL?
+    76.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x22>
+READ IN READ STATE VALID
+    76.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x21>
+    76.00ns INFO     cocotb.tb                          TEST VALUE : 35
+WRITE STATE WAIT ON FULL?
+    78.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x23>
+READ IN READ STATE VALID
+    78.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x22>
+    78.00ns INFO     cocotb.tb                          TEST VALUE : 36
+WRITE STATE WAIT ON FULL?
+    80.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x24>
+READ IN READ STATE VALID
+    80.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x23>
+    80.00ns INFO     cocotb.tb                          TEST VALUE : 37
+WRITE STATE WAIT ON FULL?
+    82.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x25>
+READ IN READ STATE VALID
+    82.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x24>
+    82.00ns INFO     cocotb.tb                          TEST VALUE : 38
+WRITE STATE WAIT ON FULL?
+    84.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x26>
+READ IN READ STATE VALID
+    84.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x25>
+    84.00ns INFO     cocotb.tb                          TEST VALUE : 39
+WRITE STATE WAIT ON FULL?
+    86.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x27>
+READ IN READ STATE VALID
+    86.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x26>
+    86.00ns INFO     cocotb.tb                          TEST VALUE : 40
+WRITE STATE WAIT ON FULL?
+    88.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x28>
+READ IN READ STATE VALID
+    88.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x27>
+    88.00ns INFO     cocotb.tb                          TEST VALUE : 41
+WRITE STATE WAIT ON FULL?
+    90.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x29>
+READ IN READ STATE VALID
+    90.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x28>
+    90.00ns INFO     cocotb.tb                          TEST VALUE : 42
+WRITE STATE WAIT ON FULL?
+    92.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2a>
+READ IN READ STATE VALID
+    92.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x29>
+    92.00ns INFO     cocotb.tb                          TEST VALUE : 43
+WRITE STATE WAIT ON FULL?
+    94.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2b>
+READ IN READ STATE VALID
+    94.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2a>
+    94.00ns INFO     cocotb.tb                          TEST VALUE : 44
+WRITE STATE WAIT ON FULL?
+    96.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2c>
+READ IN READ STATE VALID
+    96.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2b>
+    96.00ns INFO     cocotb.tb                          TEST VALUE : 45
+WRITE STATE WAIT ON FULL?
+    98.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2d>
+READ IN READ STATE VALID
+    98.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2c>
+    98.00ns INFO     cocotb.tb                          TEST VALUE : 46
+WRITE STATE WAIT ON FULL?
+   100.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2e>
+READ IN READ STATE VALID
+   100.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2d>
+   100.00ns INFO     cocotb.tb                          TEST VALUE : 47
+WRITE STATE WAIT ON FULL?
+   102.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x2f>
+READ IN READ STATE VALID
+   102.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2e>
+   102.00ns INFO     cocotb.tb                          TEST VALUE : 48
+WRITE STATE WAIT ON FULL?
+   104.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x30>
+READ IN READ STATE VALID
+   104.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x2f>
+   104.00ns INFO     cocotb.tb                          TEST VALUE : 49
+WRITE STATE WAIT ON FULL?
+   106.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x31>
+READ IN READ STATE VALID
+   106.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x30>
+   106.00ns INFO     cocotb.tb                          TEST VALUE : 50
+WRITE STATE WAIT ON FULL?
+   108.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x32>
+READ IN READ STATE VALID
+   108.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x31>
+   108.00ns INFO     cocotb.tb                          TEST VALUE : 51
+WRITE STATE WAIT ON FULL?
+   110.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x33>
+READ IN READ STATE VALID
+   110.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x32>
+   110.00ns INFO     cocotb.tb                          TEST VALUE : 52
+WRITE STATE WAIT ON FULL?
+   112.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x34>
+READ IN READ STATE VALID
+   112.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x33>
+   112.00ns INFO     cocotb.tb                          TEST VALUE : 53
+WRITE STATE WAIT ON FULL?
+   114.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x35>
+READ IN READ STATE VALID
+   114.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x34>
+   114.00ns INFO     cocotb.tb                          TEST VALUE : 54
+WRITE STATE WAIT ON FULL?
+   116.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x36>
+READ IN READ STATE VALID
+   116.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x35>
+   116.00ns INFO     cocotb.tb                          TEST VALUE : 55
+WRITE STATE WAIT ON FULL?
+   118.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x37>
+READ IN READ STATE VALID
+   118.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x36>
+   118.00ns INFO     cocotb.tb                          TEST VALUE : 56
+WRITE STATE WAIT ON FULL?
+   120.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x38>
+READ IN READ STATE VALID
+   120.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x37>
+   120.00ns INFO     cocotb.tb                          TEST VALUE : 57
+WRITE STATE WAIT ON FULL?
+   122.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x39>
+READ IN READ STATE VALID
+   122.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x38>
+   122.00ns INFO     cocotb.tb                          TEST VALUE : 58
+WRITE STATE WAIT ON FULL?
+   124.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3a>
+READ IN READ STATE VALID
+   124.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x39>
+   124.00ns INFO     cocotb.tb                          TEST VALUE : 59
+WRITE STATE WAIT ON FULL?
+   126.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3b>
+READ IN READ STATE VALID
+   126.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3a>
+   126.00ns INFO     cocotb.tb                          TEST VALUE : 60
+WRITE STATE WAIT ON FULL?
+   128.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3c>
+READ IN READ STATE VALID
+   128.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3b>
+   128.00ns INFO     cocotb.tb                          TEST VALUE : 61
+WRITE STATE WAIT ON FULL?
+   130.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3d>
+READ IN READ STATE VALID
+   130.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3c>
+   130.00ns INFO     cocotb.tb                          TEST VALUE : 62
+WRITE STATE WAIT ON FULL?
+   132.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3e>
+READ IN READ STATE VALID
+   132.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3d>
+   132.00ns INFO     cocotb.tb                          TEST VALUE : 63
+WRITE STATE WAIT ON FULL?
+   134.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x3f>
+READ IN READ STATE VALID
+   134.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3e>
+   134.00ns INFO     cocotb.tb                          TEST VALUE : 64
+WRITE STATE WAIT ON FULL?
+   136.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x40>
+READ IN READ STATE VALID
+   136.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x3f>
+   136.00ns INFO     cocotb.tb                          TEST VALUE : 65
+WRITE STATE WAIT ON FULL?
+   138.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x41>
+READ IN READ STATE VALID
+   138.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x40>
+   138.00ns INFO     cocotb.tb                          TEST VALUE : 66
+WRITE STATE WAIT ON FULL?
+   140.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x42>
+READ IN READ STATE VALID
+   140.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x41>
+   140.00ns INFO     cocotb.tb                          TEST VALUE : 67
+WRITE STATE WAIT ON FULL?
+   142.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x43>
+READ IN READ STATE VALID
+   142.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x42>
+   142.00ns INFO     cocotb.tb                          TEST VALUE : 68
+WRITE STATE WAIT ON FULL?
+   144.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x44>
+READ IN READ STATE VALID
+   144.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x43>
+   144.00ns INFO     cocotb.tb                          TEST VALUE : 69
+WRITE STATE WAIT ON FULL?
+   146.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x45>
+READ IN READ STATE VALID
+   146.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x44>
+   146.00ns INFO     cocotb.tb                          TEST VALUE : 70
+WRITE STATE WAIT ON FULL?
+   148.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x46>
+READ IN READ STATE VALID
+   148.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x45>
+   148.00ns INFO     cocotb.tb                          TEST VALUE : 71
+WRITE STATE WAIT ON FULL?
+   150.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x47>
+READ IN READ STATE VALID
+   150.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x46>
+   150.00ns INFO     cocotb.tb                          TEST VALUE : 72
+WRITE STATE WAIT ON FULL?
+   152.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x48>
+READ IN READ STATE VALID
+   152.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x47>
+   152.00ns INFO     cocotb.tb                          TEST VALUE : 73
+WRITE STATE WAIT ON FULL?
+   154.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x49>
+READ IN READ STATE VALID
+   154.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x48>
+   154.00ns INFO     cocotb.tb                          TEST VALUE : 74
+WRITE STATE WAIT ON FULL?
+   156.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4a>
+READ IN READ STATE VALID
+   156.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x49>
+   156.00ns INFO     cocotb.tb                          TEST VALUE : 75
+WRITE STATE WAIT ON FULL?
+   158.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4b>
+READ IN READ STATE VALID
+   158.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4a>
+   158.00ns INFO     cocotb.tb                          TEST VALUE : 76
+WRITE STATE WAIT ON FULL?
+   160.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4c>
+READ IN READ STATE VALID
+   160.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4b>
+   160.00ns INFO     cocotb.tb                          TEST VALUE : 77
+WRITE STATE WAIT ON FULL?
+   162.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4d>
+READ IN READ STATE VALID
+   162.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4c>
+   162.00ns INFO     cocotb.tb                          TEST VALUE : 78
+WRITE STATE WAIT ON FULL?
+   164.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4e>
+READ IN READ STATE VALID
+   164.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4d>
+   164.00ns INFO     cocotb.tb                          TEST VALUE : 79
+WRITE STATE WAIT ON FULL?
+   166.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x4f>
+READ IN READ STATE VALID
+   166.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4e>
+   166.00ns INFO     cocotb.tb                          TEST VALUE : 80
+WRITE STATE WAIT ON FULL?
+   168.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x50>
+READ IN READ STATE VALID
+   168.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x4f>
+   168.00ns INFO     cocotb.tb                          TEST VALUE : 81
+WRITE STATE WAIT ON FULL?
+   170.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x51>
+READ IN READ STATE VALID
+   170.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x50>
+   170.00ns INFO     cocotb.tb                          TEST VALUE : 82
+WRITE STATE WAIT ON FULL?
+   172.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x52>
+READ IN READ STATE VALID
+   172.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x51>
+   172.00ns INFO     cocotb.tb                          TEST VALUE : 83
+WRITE STATE WAIT ON FULL?
+   174.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x53>
+READ IN READ STATE VALID
+   174.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x52>
+   174.00ns INFO     cocotb.tb                          TEST VALUE : 84
+WRITE STATE WAIT ON FULL?
+   176.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x54>
+READ IN READ STATE VALID
+   176.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x53>
+   176.00ns INFO     cocotb.tb                          TEST VALUE : 85
+WRITE STATE WAIT ON FULL?
+   178.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x55>
+READ IN READ STATE VALID
+   178.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x54>
+   178.00ns INFO     cocotb.tb                          TEST VALUE : 86
+WRITE STATE WAIT ON FULL?
+   180.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x56>
+READ IN READ STATE VALID
+   180.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x55>
+   180.00ns INFO     cocotb.tb                          TEST VALUE : 87
+WRITE STATE WAIT ON FULL?
+   182.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x57>
+READ IN READ STATE VALID
+   182.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x56>
+   182.00ns INFO     cocotb.tb                          TEST VALUE : 88
+WRITE STATE WAIT ON FULL?
+   184.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x58>
+READ IN READ STATE VALID
+   184.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x57>
+   184.00ns INFO     cocotb.tb                          TEST VALUE : 89
+WRITE STATE WAIT ON FULL?
+   186.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x59>
+READ IN READ STATE VALID
+   186.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x58>
+   186.00ns INFO     cocotb.tb                          TEST VALUE : 90
+WRITE STATE WAIT ON FULL?
+   188.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5a>
+READ IN READ STATE VALID
+   188.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x59>
+   188.00ns INFO     cocotb.tb                          TEST VALUE : 91
+WRITE STATE WAIT ON FULL?
+   190.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5b>
+READ IN READ STATE VALID
+   190.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5a>
+   190.00ns INFO     cocotb.tb                          TEST VALUE : 92
+WRITE STATE WAIT ON FULL?
+   192.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5c>
+READ IN READ STATE VALID
+   192.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5b>
+   192.00ns INFO     cocotb.tb                          TEST VALUE : 93
+WRITE STATE WAIT ON FULL?
+   194.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5d>
+READ IN READ STATE VALID
+   194.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5c>
+   194.00ns INFO     cocotb.tb                          TEST VALUE : 94
+WRITE STATE WAIT ON FULL?
+   196.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5e>
+READ IN READ STATE VALID
+   196.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5d>
+   196.00ns INFO     cocotb.tb                          TEST VALUE : 95
+WRITE STATE WAIT ON FULL?
+   198.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x5f>
+READ IN READ STATE VALID
+   198.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5e>
+   198.00ns INFO     cocotb.tb                          TEST VALUE : 96
+WRITE STATE WAIT ON FULL?
+   200.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x60>
+READ IN READ STATE VALID
+   200.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x5f>
+   200.00ns INFO     cocotb.tb                          TEST VALUE : 97
+WRITE STATE WAIT ON FULL?
+   202.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x61>
+READ IN READ STATE VALID
+   202.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x60>
+   202.00ns INFO     cocotb.tb                          TEST VALUE : 98
+WRITE STATE WAIT ON FULL?
+   204.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x62>
+READ IN READ STATE VALID
+   204.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x61>
+   204.00ns INFO     cocotb.tb                          TEST VALUE : 99
+WRITE STATE WAIT ON FULL?
+   206.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x63>
+READ IN READ STATE VALID
+   206.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x62>
+   206.00ns INFO     cocotb.tb                          TEST VALUE : 100
+WRITE STATE WAIT ON FULL?
+   208.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x64>
+READ IN READ STATE VALID
+   208.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x63>
+   208.00ns INFO     cocotb.tb                          TEST VALUE : 101
+WRITE STATE WAIT ON FULL?
+   210.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x65>
+READ IN READ STATE VALID
+   210.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x64>
+   210.00ns INFO     cocotb.tb                          TEST VALUE : 102
+WRITE STATE WAIT ON FULL?
+   212.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x66>
+READ IN READ STATE VALID
+   212.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x65>
+   212.00ns INFO     cocotb.tb                          TEST VALUE : 103
+WRITE STATE WAIT ON FULL?
+   214.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x67>
+READ IN READ STATE VALID
+   214.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x66>
+   214.00ns INFO     cocotb.tb                          TEST VALUE : 104
+WRITE STATE WAIT ON FULL?
+   216.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x68>
+READ IN READ STATE VALID
+   216.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x67>
+   216.00ns INFO     cocotb.tb                          TEST VALUE : 105
+WRITE STATE WAIT ON FULL?
+   218.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x69>
+READ IN READ STATE VALID
+   218.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x68>
+   218.00ns INFO     cocotb.tb                          TEST VALUE : 106
+WRITE STATE WAIT ON FULL?
+   220.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6a>
+READ IN READ STATE VALID
+   220.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x69>
+   220.00ns INFO     cocotb.tb                          TEST VALUE : 107
+WRITE STATE WAIT ON FULL?
+   222.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6b>
+READ IN READ STATE VALID
+   222.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6a>
+   222.00ns INFO     cocotb.tb                          TEST VALUE : 108
+WRITE STATE WAIT ON FULL?
+   224.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6c>
+READ IN READ STATE VALID
+   224.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6b>
+   224.00ns INFO     cocotb.tb                          TEST VALUE : 109
+WRITE STATE WAIT ON FULL?
+   226.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6d>
+READ IN READ STATE VALID
+   226.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6c>
+   226.00ns INFO     cocotb.tb                          TEST VALUE : 110
+WRITE STATE WAIT ON FULL?
+   228.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6e>
+READ IN READ STATE VALID
+   228.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6d>
+   228.00ns INFO     cocotb.tb                          TEST VALUE : 111
+WRITE STATE WAIT ON FULL?
+   230.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x6f>
+READ IN READ STATE VALID
+   230.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6e>
+   230.00ns INFO     cocotb.tb                          TEST VALUE : 112
+WRITE STATE WAIT ON FULL?
+   232.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x70>
+READ IN READ STATE VALID
+   232.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x6f>
+   232.00ns INFO     cocotb.tb                          TEST VALUE : 113
+WRITE STATE WAIT ON FULL?
+   234.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x71>
+READ IN READ STATE VALID
+   234.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x70>
+   234.00ns INFO     cocotb.tb                          TEST VALUE : 114
+WRITE STATE WAIT ON FULL?
+   236.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x72>
+READ IN READ STATE VALID
+   236.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x71>
+   236.00ns INFO     cocotb.tb                          TEST VALUE : 115
+WRITE STATE WAIT ON FULL?
+   238.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x73>
+READ IN READ STATE VALID
+   238.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x72>
+   238.00ns INFO     cocotb.tb                          TEST VALUE : 116
+WRITE STATE WAIT ON FULL?
+   240.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x74>
+READ IN READ STATE VALID
+   240.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x73>
+   240.00ns INFO     cocotb.tb                          TEST VALUE : 117
+WRITE STATE WAIT ON FULL?
+   242.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x75>
+READ IN READ STATE VALID
+   242.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x74>
+   242.00ns INFO     cocotb.tb                          TEST VALUE : 118
+WRITE STATE WAIT ON FULL?
+   244.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x76>
+READ IN READ STATE VALID
+   244.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x75>
+   244.00ns INFO     cocotb.tb                          TEST VALUE : 119
+WRITE STATE WAIT ON FULL?
+   246.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x77>
+READ IN READ STATE VALID
+   246.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x76>
+   246.00ns INFO     cocotb.tb                          TEST VALUE : 120
+WRITE STATE WAIT ON FULL?
+   248.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x78>
+READ IN READ STATE VALID
+   248.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x77>
+   248.00ns INFO     cocotb.tb                          TEST VALUE : 121
+WRITE STATE WAIT ON FULL?
+   250.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x79>
+READ IN READ STATE VALID
+   250.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x78>
+   250.00ns INFO     cocotb.tb                          TEST VALUE : 122
+WRITE STATE WAIT ON FULL?
+   252.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7a>
+READ IN READ STATE VALID
+   252.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x79>
+   252.00ns INFO     cocotb.tb                          TEST VALUE : 123
+WRITE STATE WAIT ON FULL?
+   254.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7b>
+READ IN READ STATE VALID
+   254.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7a>
+   254.00ns INFO     cocotb.tb                          TEST VALUE : 124
+WRITE STATE WAIT ON FULL?
+   256.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7c>
+READ IN READ STATE VALID
+   256.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7b>
+   256.00ns INFO     cocotb.tb                          TEST VALUE : 125
+WRITE STATE WAIT ON FULL?
+   258.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7d>
+READ IN READ STATE VALID
+   258.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7c>
+   258.00ns INFO     cocotb.tb                          TEST VALUE : 126
+WRITE STATE WAIT ON FULL?
+   260.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7e>
+READ IN READ STATE VALID
+   260.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7d>
+   260.00ns INFO     cocotb.tb                          TEST VALUE : 127
+WRITE STATE WAIT ON FULL?
+   262.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x7f>
+READ IN READ STATE VALID
+   262.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7e>
+   262.00ns INFO     cocotb.tb                          TEST VALUE : 128
+WRITE STATE WAIT ON FULL?
+   264.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x80>
+READ IN READ STATE VALID
+   264.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x7f>
+   264.00ns INFO     cocotb.tb                          TEST VALUE : 129
+WRITE STATE WAIT ON FULL?
+   266.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x81>
+READ IN READ STATE VALID
+   266.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x80>
+   266.00ns INFO     cocotb.tb                          TEST VALUE : 130
+WRITE STATE WAIT ON FULL?
+   268.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x82>
+READ IN READ STATE VALID
+   268.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x81>
+   268.00ns INFO     cocotb.tb                          TEST VALUE : 131
+WRITE STATE WAIT ON FULL?
+   270.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x83>
+READ IN READ STATE VALID
+   270.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x82>
+   270.00ns INFO     cocotb.tb                          TEST VALUE : 132
+WRITE STATE WAIT ON FULL?
+   272.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x84>
+READ IN READ STATE VALID
+   272.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x83>
+   272.00ns INFO     cocotb.tb                          TEST VALUE : 133
+WRITE STATE WAIT ON FULL?
+   274.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x85>
+READ IN READ STATE VALID
+   274.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x84>
+   274.00ns INFO     cocotb.tb                          TEST VALUE : 134
+WRITE STATE WAIT ON FULL?
+   276.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x86>
+READ IN READ STATE VALID
+   276.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x85>
+   276.00ns INFO     cocotb.tb                          TEST VALUE : 135
+WRITE STATE WAIT ON FULL?
+   278.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x87>
+READ IN READ STATE VALID
+   278.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x86>
+   278.00ns INFO     cocotb.tb                          TEST VALUE : 136
+WRITE STATE WAIT ON FULL?
+   280.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x88>
+READ IN READ STATE VALID
+   280.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x87>
+   280.00ns INFO     cocotb.tb                          TEST VALUE : 137
+WRITE STATE WAIT ON FULL?
+   282.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x89>
+READ IN READ STATE VALID
+   282.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x88>
+   282.00ns INFO     cocotb.tb                          TEST VALUE : 138
+WRITE STATE WAIT ON FULL?
+   284.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8a>
+READ IN READ STATE VALID
+   284.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x89>
+   284.00ns INFO     cocotb.tb                          TEST VALUE : 139
+WRITE STATE WAIT ON FULL?
+   286.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8b>
+READ IN READ STATE VALID
+   286.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8a>
+   286.00ns INFO     cocotb.tb                          TEST VALUE : 140
+WRITE STATE WAIT ON FULL?
+   288.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8c>
+READ IN READ STATE VALID
+   288.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8b>
+   288.00ns INFO     cocotb.tb                          TEST VALUE : 141
+WRITE STATE WAIT ON FULL?
+   290.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8d>
+READ IN READ STATE VALID
+   290.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8c>
+   290.00ns INFO     cocotb.tb                          TEST VALUE : 142
+WRITE STATE WAIT ON FULL?
+   292.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8e>
+READ IN READ STATE VALID
+   292.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8d>
+   292.00ns INFO     cocotb.tb                          TEST VALUE : 143
+WRITE STATE WAIT ON FULL?
+   294.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x8f>
+READ IN READ STATE VALID
+   294.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8e>
+   294.00ns INFO     cocotb.tb                          TEST VALUE : 144
+WRITE STATE WAIT ON FULL?
+   296.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x90>
+READ IN READ STATE VALID
+   296.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x8f>
+   296.00ns INFO     cocotb.tb                          TEST VALUE : 145
+WRITE STATE WAIT ON FULL?
+   298.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x91>
+READ IN READ STATE VALID
+   298.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x90>
+   298.00ns INFO     cocotb.tb                          TEST VALUE : 146
+WRITE STATE WAIT ON FULL?
+   300.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x92>
+READ IN READ STATE VALID
+   300.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x91>
+   300.00ns INFO     cocotb.tb                          TEST VALUE : 147
+WRITE STATE WAIT ON FULL?
+   302.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x93>
+READ IN READ STATE VALID
+   302.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x92>
+   302.00ns INFO     cocotb.tb                          TEST VALUE : 148
+WRITE STATE WAIT ON FULL?
+   304.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x94>
+READ IN READ STATE VALID
+   304.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x93>
+   304.00ns INFO     cocotb.tb                          TEST VALUE : 149
+WRITE STATE WAIT ON FULL?
+   306.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x95>
+READ IN READ STATE VALID
+   306.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x94>
+   306.00ns INFO     cocotb.tb                          TEST VALUE : 150
+WRITE STATE WAIT ON FULL?
+   308.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x96>
+READ IN READ STATE VALID
+   308.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x95>
+   308.00ns INFO     cocotb.tb                          TEST VALUE : 151
+WRITE STATE WAIT ON FULL?
+   310.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x97>
+READ IN READ STATE VALID
+   310.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x96>
+   310.00ns INFO     cocotb.tb                          TEST VALUE : 152
+WRITE STATE WAIT ON FULL?
+   312.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x98>
+READ IN READ STATE VALID
+   312.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x97>
+   312.00ns INFO     cocotb.tb                          TEST VALUE : 153
+WRITE STATE WAIT ON FULL?
+   314.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x99>
+READ IN READ STATE VALID
+   314.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x98>
+   314.00ns INFO     cocotb.tb                          TEST VALUE : 154
+WRITE STATE WAIT ON FULL?
+   316.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9a>
+READ IN READ STATE VALID
+   316.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x99>
+   316.00ns INFO     cocotb.tb                          TEST VALUE : 155
+WRITE STATE WAIT ON FULL?
+   318.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9b>
+READ IN READ STATE VALID
+   318.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9a>
+   318.00ns INFO     cocotb.tb                          TEST VALUE : 156
+WRITE STATE WAIT ON FULL?
+   320.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9c>
+READ IN READ STATE VALID
+   320.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9b>
+   320.00ns INFO     cocotb.tb                          TEST VALUE : 157
+WRITE STATE WAIT ON FULL?
+   322.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9d>
+READ IN READ STATE VALID
+   322.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9c>
+   322.00ns INFO     cocotb.tb                          TEST VALUE : 158
+WRITE STATE WAIT ON FULL?
+   324.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9e>
+READ IN READ STATE VALID
+   324.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9d>
+   324.00ns INFO     cocotb.tb                          TEST VALUE : 159
+WRITE STATE WAIT ON FULL?
+   326.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0x9f>
+READ IN READ STATE VALID
+   326.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9e>
+   326.00ns INFO     cocotb.tb                          TEST VALUE : 160
+WRITE STATE WAIT ON FULL?
+   328.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa0>
+READ IN READ STATE VALID
+   328.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0x9f>
+   328.00ns INFO     cocotb.tb                          TEST VALUE : 161
+WRITE STATE WAIT ON FULL?
+   330.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa1>
+READ IN READ STATE VALID
+   330.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa0>
+   330.00ns INFO     cocotb.tb                          TEST VALUE : 162
+WRITE STATE WAIT ON FULL?
+   332.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa2>
+READ IN READ STATE VALID
+   332.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa1>
+   332.00ns INFO     cocotb.tb                          TEST VALUE : 163
+WRITE STATE WAIT ON FULL?
+   334.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa3>
+READ IN READ STATE VALID
+   334.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa2>
+   334.00ns INFO     cocotb.tb                          TEST VALUE : 164
+WRITE STATE WAIT ON FULL?
+   336.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa4>
+READ IN READ STATE VALID
+   336.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa3>
+   336.00ns INFO     cocotb.tb                          TEST VALUE : 165
+WRITE STATE WAIT ON FULL?
+   338.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa5>
+READ IN READ STATE VALID
+   338.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa4>
+   338.00ns INFO     cocotb.tb                          TEST VALUE : 166
+WRITE STATE WAIT ON FULL?
+   340.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa6>
+READ IN READ STATE VALID
+   340.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa5>
+   340.00ns INFO     cocotb.tb                          TEST VALUE : 167
+WRITE STATE WAIT ON FULL?
+   342.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa7>
+READ IN READ STATE VALID
+   342.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa6>
+   342.00ns INFO     cocotb.tb                          TEST VALUE : 168
+WRITE STATE WAIT ON FULL?
+   344.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa8>
+READ IN READ STATE VALID
+   344.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa7>
+   344.00ns INFO     cocotb.tb                          TEST VALUE : 169
+WRITE STATE WAIT ON FULL?
+   346.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xa9>
+READ IN READ STATE VALID
+   346.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa8>
+   346.00ns INFO     cocotb.tb                          TEST VALUE : 170
+WRITE STATE WAIT ON FULL?
+   348.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xaa>
+READ IN READ STATE VALID
+   348.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xa9>
+   348.00ns INFO     cocotb.tb                          TEST VALUE : 171
+WRITE STATE WAIT ON FULL?
+   350.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xab>
+READ IN READ STATE VALID
+   350.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xaa>
+   350.00ns INFO     cocotb.tb                          TEST VALUE : 172
+WRITE STATE WAIT ON FULL?
+   352.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xac>
+READ IN READ STATE VALID
+   352.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xab>
+   352.00ns INFO     cocotb.tb                          TEST VALUE : 173
+WRITE STATE WAIT ON FULL?
+   354.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xad>
+READ IN READ STATE VALID
+   354.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xac>
+   354.00ns INFO     cocotb.tb                          TEST VALUE : 174
+WRITE STATE WAIT ON FULL?
+   356.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xae>
+READ IN READ STATE VALID
+   356.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xad>
+   356.00ns INFO     cocotb.tb                          TEST VALUE : 175
+WRITE STATE WAIT ON FULL?
+   358.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xaf>
+READ IN READ STATE VALID
+   358.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xae>
+   358.00ns INFO     cocotb.tb                          TEST VALUE : 176
+WRITE STATE WAIT ON FULL?
+   360.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb0>
+READ IN READ STATE VALID
+   360.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xaf>
+   360.00ns INFO     cocotb.tb                          TEST VALUE : 177
+WRITE STATE WAIT ON FULL?
+   362.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb1>
+READ IN READ STATE VALID
+   362.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb0>
+   362.00ns INFO     cocotb.tb                          TEST VALUE : 178
+WRITE STATE WAIT ON FULL?
+   364.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb2>
+READ IN READ STATE VALID
+   364.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb1>
+   364.00ns INFO     cocotb.tb                          TEST VALUE : 179
+WRITE STATE WAIT ON FULL?
+   366.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb3>
+READ IN READ STATE VALID
+   366.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb2>
+   366.00ns INFO     cocotb.tb                          TEST VALUE : 180
+WRITE STATE WAIT ON FULL?
+   368.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb4>
+READ IN READ STATE VALID
+   368.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb3>
+   368.00ns INFO     cocotb.tb                          TEST VALUE : 181
+WRITE STATE WAIT ON FULL?
+   370.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb5>
+READ IN READ STATE VALID
+   370.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb4>
+   370.00ns INFO     cocotb.tb                          TEST VALUE : 182
+WRITE STATE WAIT ON FULL?
+   372.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb6>
+READ IN READ STATE VALID
+   372.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb5>
+   372.00ns INFO     cocotb.tb                          TEST VALUE : 183
+WRITE STATE WAIT ON FULL?
+   374.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb7>
+READ IN READ STATE VALID
+   374.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb6>
+   374.00ns INFO     cocotb.tb                          TEST VALUE : 184
+WRITE STATE WAIT ON FULL?
+   376.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb8>
+READ IN READ STATE VALID
+   376.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb7>
+   376.00ns INFO     cocotb.tb                          TEST VALUE : 185
+WRITE STATE WAIT ON FULL?
+   378.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xb9>
+READ IN READ STATE VALID
+   378.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb8>
+   378.00ns INFO     cocotb.tb                          TEST VALUE : 186
+WRITE STATE WAIT ON FULL?
+   380.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xba>
+READ IN READ STATE VALID
+   380.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xb9>
+   380.00ns INFO     cocotb.tb                          TEST VALUE : 187
+WRITE STATE WAIT ON FULL?
+   382.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xbb>
+READ IN READ STATE VALID
+   382.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xba>
+   382.00ns INFO     cocotb.tb                          TEST VALUE : 188
+WRITE STATE WAIT ON FULL?
+   384.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xbc>
+READ IN READ STATE VALID
+   384.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xbb>
+   384.00ns INFO     cocotb.tb                          TEST VALUE : 189
+WRITE STATE WAIT ON FULL?
+   386.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xbd>
+READ IN READ STATE VALID
+   386.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xbc>
+   386.00ns INFO     cocotb.tb                          TEST VALUE : 190
+WRITE STATE WAIT ON FULL?
+   388.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xbe>
+READ IN READ STATE VALID
+   388.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xbd>
+   388.00ns INFO     cocotb.tb                          TEST VALUE : 191
+WRITE STATE WAIT ON FULL?
+   390.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xbf>
+READ IN READ STATE VALID
+   390.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xbe>
+   390.00ns INFO     cocotb.tb                          TEST VALUE : 192
+WRITE STATE WAIT ON FULL?
+   392.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc0>
+READ IN READ STATE VALID
+   392.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xbf>
+   392.00ns INFO     cocotb.tb                          TEST VALUE : 193
+WRITE STATE WAIT ON FULL?
+   394.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc1>
+READ IN READ STATE VALID
+   394.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc0>
+   394.00ns INFO     cocotb.tb                          TEST VALUE : 194
+WRITE STATE WAIT ON FULL?
+   396.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc2>
+READ IN READ STATE VALID
+   396.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc1>
+   396.00ns INFO     cocotb.tb                          TEST VALUE : 195
+WRITE STATE WAIT ON FULL?
+   398.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc3>
+READ IN READ STATE VALID
+   398.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc2>
+   398.00ns INFO     cocotb.tb                          TEST VALUE : 196
+WRITE STATE WAIT ON FULL?
+   400.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc4>
+READ IN READ STATE VALID
+   400.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc3>
+   400.00ns INFO     cocotb.tb                          TEST VALUE : 197
+WRITE STATE WAIT ON FULL?
+   402.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc5>
+READ IN READ STATE VALID
+   402.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc4>
+   402.00ns INFO     cocotb.tb                          TEST VALUE : 198
+WRITE STATE WAIT ON FULL?
+   404.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc6>
+READ IN READ STATE VALID
+   404.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc5>
+   404.00ns INFO     cocotb.tb                          TEST VALUE : 199
+WRITE STATE WAIT ON FULL?
+   406.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc7>
+READ IN READ STATE VALID
+   406.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc6>
+   406.00ns INFO     cocotb.tb                          TEST VALUE : 200
+WRITE STATE WAIT ON FULL?
+   408.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc8>
+READ IN READ STATE VALID
+   408.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc7>
+   408.00ns INFO     cocotb.tb                          TEST VALUE : 201
+WRITE STATE WAIT ON FULL?
+   410.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xc9>
+READ IN READ STATE VALID
+   410.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc8>
+   410.00ns INFO     cocotb.tb                          TEST VALUE : 202
+WRITE STATE WAIT ON FULL?
+   412.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xca>
+READ IN READ STATE VALID
+   412.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xc9>
+   412.00ns INFO     cocotb.tb                          TEST VALUE : 203
+WRITE STATE WAIT ON FULL?
+   414.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xcb>
+READ IN READ STATE VALID
+   414.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xca>
+   414.00ns INFO     cocotb.tb                          TEST VALUE : 204
+WRITE STATE WAIT ON FULL?
+   416.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xcc>
+READ IN READ STATE VALID
+   416.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xcb>
+   416.00ns INFO     cocotb.tb                          TEST VALUE : 205
+WRITE STATE WAIT ON FULL?
+   418.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xcd>
+READ IN READ STATE VALID
+   418.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xcc>
+   418.00ns INFO     cocotb.tb                          TEST VALUE : 206
+WRITE STATE WAIT ON FULL?
+   420.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xce>
+READ IN READ STATE VALID
+   420.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xcd>
+   420.00ns INFO     cocotb.tb                          TEST VALUE : 207
+WRITE STATE WAIT ON FULL?
+   422.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xcf>
+READ IN READ STATE VALID
+   422.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xce>
+   422.00ns INFO     cocotb.tb                          TEST VALUE : 208
+WRITE STATE WAIT ON FULL?
+   424.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd0>
+READ IN READ STATE VALID
+   424.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xcf>
+   424.00ns INFO     cocotb.tb                          TEST VALUE : 209
+WRITE STATE WAIT ON FULL?
+   426.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd1>
+READ IN READ STATE VALID
+   426.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd0>
+   426.00ns INFO     cocotb.tb                          TEST VALUE : 210
+WRITE STATE WAIT ON FULL?
+   428.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd2>
+READ IN READ STATE VALID
+   428.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd1>
+   428.00ns INFO     cocotb.tb                          TEST VALUE : 211
+WRITE STATE WAIT ON FULL?
+   430.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd3>
+READ IN READ STATE VALID
+   430.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd2>
+   430.00ns INFO     cocotb.tb                          TEST VALUE : 212
+WRITE STATE WAIT ON FULL?
+   432.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd4>
+READ IN READ STATE VALID
+   432.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd3>
+   432.00ns INFO     cocotb.tb                          TEST VALUE : 213
+WRITE STATE WAIT ON FULL?
+   434.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd5>
+READ IN READ STATE VALID
+   434.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd4>
+   434.00ns INFO     cocotb.tb                          TEST VALUE : 214
+WRITE STATE WAIT ON FULL?
+   436.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd6>
+READ IN READ STATE VALID
+   436.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd5>
+   436.00ns INFO     cocotb.tb                          TEST VALUE : 215
+WRITE STATE WAIT ON FULL?
+   438.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd7>
+READ IN READ STATE VALID
+   438.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd6>
+   438.00ns INFO     cocotb.tb                          TEST VALUE : 216
+WRITE STATE WAIT ON FULL?
+   440.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd8>
+READ IN READ STATE VALID
+   440.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd7>
+   440.00ns INFO     cocotb.tb                          TEST VALUE : 217
+WRITE STATE WAIT ON FULL?
+   442.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xd9>
+READ IN READ STATE VALID
+   442.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd8>
+   442.00ns INFO     cocotb.tb                          TEST VALUE : 218
+WRITE STATE WAIT ON FULL?
+   444.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xda>
+READ IN READ STATE VALID
+   444.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xd9>
+   444.00ns INFO     cocotb.tb                          TEST VALUE : 219
+WRITE STATE WAIT ON FULL?
+   446.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xdb>
+READ IN READ STATE VALID
+   446.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xda>
+   446.00ns INFO     cocotb.tb                          TEST VALUE : 220
+WRITE STATE WAIT ON FULL?
+   448.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xdc>
+READ IN READ STATE VALID
+   448.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xdb>
+   448.00ns INFO     cocotb.tb                          TEST VALUE : 221
+WRITE STATE WAIT ON FULL?
+   450.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xdd>
+READ IN READ STATE VALID
+   450.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xdc>
+   450.00ns INFO     cocotb.tb                          TEST VALUE : 222
+WRITE STATE WAIT ON FULL?
+   452.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xde>
+READ IN READ STATE VALID
+   452.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xdd>
+   452.00ns INFO     cocotb.tb                          TEST VALUE : 223
+WRITE STATE WAIT ON FULL?
+   454.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xdf>
+READ IN READ STATE VALID
+   454.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xde>
+   454.00ns INFO     cocotb.tb                          TEST VALUE : 224
+WRITE STATE WAIT ON FULL?
+   456.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe0>
+READ IN READ STATE VALID
+   456.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xdf>
+   456.00ns INFO     cocotb.tb                          TEST VALUE : 225
+WRITE STATE WAIT ON FULL?
+   458.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe1>
+READ IN READ STATE VALID
+   458.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe0>
+   458.00ns INFO     cocotb.tb                          TEST VALUE : 226
+WRITE STATE WAIT ON FULL?
+   460.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe2>
+READ IN READ STATE VALID
+   460.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe1>
+   460.00ns INFO     cocotb.tb                          TEST VALUE : 227
+WRITE STATE WAIT ON FULL?
+   462.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe3>
+READ IN READ STATE VALID
+   462.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe2>
+   462.00ns INFO     cocotb.tb                          TEST VALUE : 228
+WRITE STATE WAIT ON FULL?
+   464.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe4>
+READ IN READ STATE VALID
+   464.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe3>
+   464.00ns INFO     cocotb.tb                          TEST VALUE : 229
+WRITE STATE WAIT ON FULL?
+   466.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe5>
+READ IN READ STATE VALID
+   466.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe4>
+   466.00ns INFO     cocotb.tb                          TEST VALUE : 230
+WRITE STATE WAIT ON FULL?
+   468.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe6>
+READ IN READ STATE VALID
+   468.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe5>
+   468.00ns INFO     cocotb.tb                          TEST VALUE : 231
+WRITE STATE WAIT ON FULL?
+   470.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe7>
+READ IN READ STATE VALID
+   470.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe6>
+   470.00ns INFO     cocotb.tb                          TEST VALUE : 232
+WRITE STATE WAIT ON FULL?
+   472.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe8>
+READ IN READ STATE VALID
+   472.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe7>
+   472.00ns INFO     cocotb.tb                          TEST VALUE : 233
+WRITE STATE WAIT ON FULL?
+   474.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xe9>
+READ IN READ STATE VALID
+   474.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe8>
+   474.00ns INFO     cocotb.tb                          TEST VALUE : 234
+WRITE STATE WAIT ON FULL?
+   476.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xea>
+READ IN READ STATE VALID
+   476.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xe9>
+   476.00ns INFO     cocotb.tb                          TEST VALUE : 235
+WRITE STATE WAIT ON FULL?
+   478.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xeb>
+READ IN READ STATE VALID
+   478.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xea>
+   478.00ns INFO     cocotb.tb                          TEST VALUE : 236
+WRITE STATE WAIT ON FULL?
+   480.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xec>
+READ IN READ STATE VALID
+   480.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xeb>
+   480.00ns INFO     cocotb.tb                          TEST VALUE : 237
+WRITE STATE WAIT ON FULL?
+   482.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xed>
+READ IN READ STATE VALID
+   482.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xec>
+   482.00ns INFO     cocotb.tb                          TEST VALUE : 238
+WRITE STATE WAIT ON FULL?
+   484.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xee>
+READ IN READ STATE VALID
+   484.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xed>
+   484.00ns INFO     cocotb.tb                          TEST VALUE : 239
+WRITE STATE WAIT ON FULL?
+   486.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xef>
+READ IN READ STATE VALID
+   486.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xee>
+   486.00ns INFO     cocotb.tb                          TEST VALUE : 240
+WRITE STATE WAIT ON FULL?
+   488.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf0>
+READ IN READ STATE VALID
+   488.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xef>
+   488.00ns INFO     cocotb.tb                          TEST VALUE : 241
+WRITE STATE WAIT ON FULL?
+   490.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf1>
+READ IN READ STATE VALID
+   490.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf0>
+   490.00ns INFO     cocotb.tb                          TEST VALUE : 242
+WRITE STATE WAIT ON FULL?
+   492.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf2>
+READ IN READ STATE VALID
+   492.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf1>
+   492.00ns INFO     cocotb.tb                          TEST VALUE : 243
+WRITE STATE WAIT ON FULL?
+   494.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf3>
+READ IN READ STATE VALID
+   494.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf2>
+   494.00ns INFO     cocotb.tb                          TEST VALUE : 244
+WRITE STATE WAIT ON FULL?
+   496.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf4>
+READ IN READ STATE VALID
+   496.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf3>
+   496.00ns INFO     cocotb.tb                          TEST VALUE : 245
+WRITE STATE WAIT ON FULL?
+   498.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf5>
+READ IN READ STATE VALID
+   498.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf4>
+   498.00ns INFO     cocotb.tb                          TEST VALUE : 246
+WRITE STATE WAIT ON FULL?
+   500.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf6>
+READ IN READ STATE VALID
+   500.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf5>
+   500.00ns INFO     cocotb.tb                          TEST VALUE : 247
+WRITE STATE WAIT ON FULL?
+   502.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf7>
+READ IN READ STATE VALID
+   502.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf6>
+   502.00ns INFO     cocotb.tb                          TEST VALUE : 248
+WRITE STATE WAIT ON FULL?
+   504.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf8>
+READ IN READ STATE VALID
+   504.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf7>
+   504.00ns INFO     cocotb.tb                          TEST VALUE : 249
+WRITE STATE WAIT ON FULL?
+   506.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xf9>
+READ IN READ STATE VALID
+   506.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf8>
+   506.00ns INFO     cocotb.tb                          TEST VALUE : 250
+WRITE STATE WAIT ON FULL?
+   508.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xfa>
+READ IN READ STATE VALID
+   508.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xf9>
+   508.00ns INFO     cocotb.tb                          TEST VALUE : 251
+WRITE STATE WAIT ON FULL?
+   510.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xfb>
+READ IN READ STATE VALID
+   510.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xfa>
+   510.00ns INFO     cocotb.tb                          TEST VALUE : 252
+WRITE STATE WAIT ON FULL?
+   512.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xfc>
+READ IN READ STATE VALID
+   512.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xfb>
+   512.00ns INFO     cocotb.tb                          TEST VALUE : 253
+WRITE STATE WAIT ON FULL?
+   514.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xfd>
+READ IN READ STATE VALID
+   514.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xfc>
+   514.00ns INFO     cocotb.tb                          TEST VALUE : 254
+WRITE STATE WAIT ON FULL?
+   516.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xfe>
+READ IN READ STATE VALID
+   516.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xfd>
+   516.00ns INFO     cocotb.tb                          TEST VALUE : 255
+WRITE STATE WAIT ON FULL?
+   518.00ns INFO     cocotb.test.wr                     xilinxFIFOsource on bus prefix wr : write transaction = <data : 0xff>
+READ IN READ STATE VALID
+   518.00ns INFO     cocotb.test.rd                     xilinxFIFOsink on bus prefix rd :  read transaction = <data : 0xfe>
+   518.10ns INFO     cocotb.regression                  run_test_001 passed
+   518.10ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test.run_test_001              PASS         518.10           0.08       6855.86  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                518.10           0.17       3091.53  **
+                                                        **************************************************************************************
+                                                        
+FST info: dumpfile test.fst opened for output.
+make[1]: Leaving directory '/home/convertinoj/Projects/PUBLIC/cocotbext-fifo/tests/xilinx_fifo'

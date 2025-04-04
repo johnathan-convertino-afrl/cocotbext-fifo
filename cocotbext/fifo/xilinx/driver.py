@@ -94,53 +94,44 @@ class xilinxFIFOsource(xilinxFIFObase):
 
     while True:
       await RisingEdge(self.clock)
-
-      # when in reset, set values and idle.
+      self._idle_read.set()
+      # when in reset, set values.
       if not self._resetn.value:
         self.bus.en.value   = 0
         self.bus.data.value = 0
-
-        self._idle.set()
         continue
 
       if(self._state == xilinxFIFOsourceState.IDLE):
         if not self.wqueue.empty() and (self._fwft or not self.bus.full.value):
-            self.log.info(f'XILINX FIFO SOURCE STATE: {self._state.name} BUS WRITE')
             trans = await self.wqueue.get()
             self.bus.en.value = 1
             self.bus.data.value = trans.data
             self.active = True
             self._state = xilinxFIFOsourceState.WRITE
-            self._idle.set()
+            self._idle_write.set()
       elif(self._state == xilinxFIFOsourceState.WRITE):
         if self.wqueue.empty():
           if self._ack.value:
-            self.log.info(f'XILINX FIFO SOURCE STATE: {self._state.name} BUS RELEASE')
             self.bus.en.setimmediatevalue(0)
             self.bus.data.setimmediatevalue(0)
             self.active = False
-            self._idle.set()
             self._state = xilinxFIFOsourceState.IDLE
         elif not self.bus.full.value:
           if self._ack.value:
-            self.log.info(f'XILINX FIFO SOURCE STATE: {self._state.name} BUS WRITE')
             trans = await self.wqueue.get()
             self.bus.en.value = 1
             self.bus.data.value = trans.data
-            self._idle.set()
+            self._idle_write.set()
         else:
-          self.log.info(f'XILINX FIFO SOURCE STATE: {self._state.name} BUS FULL')
           self.bus.en.value = 1
           self._state = xilinxFIFOsourceState.FULL
-          self._idle.set()
       elif(self._state == xilinxFIFOsourceState.FULL):
         if self._ack.value:
-          self.log.info(f'XILINX FIFO SOURCE STATE: {self._state.name} BUS NOT FULL')
           trans = await self.wqueue.get()
           self.bus.en.value = 1
           self.bus.data.value = trans.data
           self._state = xilinxFIFOsourceState.WRITE
-          self._idle.set()
+          self._idle_write.set()
 
 # Class: xilinxFIFOsink
 # Drive xilinx FIFO read interfaces
@@ -215,38 +206,35 @@ class xilinxFIFOsink(xilinxFIFObase):
 
     while True:
       await RisingEdge(self.clock)
-
+      self._idle_write.set()
       # when in reset, set values and idle.
       if not self._resetn.value:
         self.bus.en.value   = 0
-
-        self._idle.set()
         continue
 
       if(self._state == xilinxFIFOsinkState.IDLE):
         if not self.qqueue.empty() and (self._fwft and not self.bus.empty.value):
-          self.log.info(f'XILINX FIFO SINK STATE: {self._state.name} BUS READ')
           trans = await self.qqueue.get()
           self.bus.en.value = 1
           if self.bus.valid.value and self._fwft:
             trans.data = self.bus.data.value.integer
             await self.rqueue.put(trans)
+            self._idle_read.set()
           self.active = True
           self._state = xilinxFIFOsinkState.READ
-        else:
-          self._idle.set()
       elif(self._state == xilinxFIFOsinkState.READ):
         if self.qqueue.empty():
-          self.log.info(f'XILINX FIFO SINK STATE: {self._state.name} BUS RELEASE')
+          if self.bus.valid.value and not self._fwft:
+            trans.data = self.bus.data.value.integer
+            await self.rqueue.put(trans)
           self.bus.en.value = 0
           self.active = False
-          self._idle.set()
+          self._idle_read.set()
           self._state = xilinxFIFOsinkState.IDLE
         else:
           if self.bus.valid.value:
-            self.log.info(f'XILINX FIFO SINK STATE: {self._state.name} BUS READ')
             trans = await self.qqueue.get()
             self.bus.en.value = 1
             trans.data = self.bus.data.value.integer
             await self.rqueue.put(trans)
-            self._idle.set()
+            self._idle_read.set()
