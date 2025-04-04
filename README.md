@@ -32,7 +32,7 @@
 #### Build
   - cocotb
   - cocotb-bus
-  - cocotb-busbase
+  - cocotbext-busbase
 
 ### COMPONENTS
 
